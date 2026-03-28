@@ -381,7 +381,7 @@ section {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 12px;
 }
 
 .emergency-content i {
