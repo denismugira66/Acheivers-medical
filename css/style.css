@@ -1,0 +1,1153 @@
+/* ============================================
+   Achievers Medical Consultance
+   Modern Healthcare Website Styles
+   Mobile-First Design
+   ============================================ */
+
+:root {
+    --navy: #0A2B4E;
+    --white: #FFFFFF;
+    --green: #2C7A4B;
+    --green-light: #3B9A62;
+    --sky: #38BDF8;
+    --gray-light: #F1F5F9;
+    --gray: #CBD5E1;
+    --text-dark: #1E2A3A;
+    --text-muted: #4B5563;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--white);
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, .logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+/* Typography */
+.section-title {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--navy);
+    position: relative;
+}
+
+.section-title:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--green);
+    margin: 12px auto 0;
+    border-radius: 4px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 28px;
+    border-radius: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--green);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--green-light);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1.5px solid var(--navy);
+    color: var(--navy);
+}
+
+.btn-outline:hover {
+    background-color: var(--navy);
+    color: white;
+}
+
+.btn-large {
+    padding: 16px 36px;
+    font-size: 1.1rem;
+}
+
+.btn-block {
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-text {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-text:hover {
+    text-decoration: underline;
+}
+
+.btn-text-link {
+    display: inline-block;
+    margin-top: 16px;
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Navigation */
+.navbar {
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 16px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.logo i {
+    color: var(--green);
+    font-size: 1.8rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--green);
+}
+
+.nav-dashboard {
+    background: var(--navy);
+    color: white !important;
+    padding: 8px 16px;
+    border-radius: 30px;
+}
+
+.nav-dashboard:hover {
+    background: var(--green);
+    color: white !important;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--navy);
+    border-radius: 3px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #EFF6FF 0%, #FFFFFF 100%);
+    padding: 60px 0;
+}
+
+.hero-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.2rem;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: var(--navy);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+    max-width: 600px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 28px;
+    box-shadow: 0 20px 35px -10px rgba(0,0,0,0.1);
+}
+
+/* About Preview */
+.about-preview {
+    background: var(--white);
+}
+
+.about-preview-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.about-preview-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--green);
+}
+
+.stat-label {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+}
+
+.service-card {
+    background: white;
+    padding: 32px 24px;
+    border-radius: 24px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+    transition: 0.2s;
+    border: 1px solid var(--gray);
+    text-align: center;
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    color: var(--green);
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    margin-bottom: 12px;
+    color: var(--navy);
+}
+
+.service-link {
+    display: inline-block;
+    margin-top: 16px;
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Why Choose Us Grid */
+.why-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+}
+
+.why-card {
+    background: white;
+    padding: 28px 20px;
+    border-radius: 24px;
+    text-align: center;
+    border: 1px solid var(--gray);
+}
+
+.why-card i {
+    font-size: 2.5rem;
+    color: var(--green);
+    margin-bottom: 20px;
+}
+
+/* CTA Banner */
+.cta-banner {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+}
+
+.cta-content p {
+    margin-bottom: 24px;
+    opacity: 0.9;
+}
+
+/* Page Header */
+.page-header {
+    background: var(--gray-light);
+    padding: 60px 0 40px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+/* About Page Specific */
+.about-grid-full {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.mv-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.mission-card, .vision-card {
+    background: white;
+    padding: 40px;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.mission-card i, .vision-card i {
+    font-size: 2.5rem;
+    color: var(--green);
+    margin-bottom: 20px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+}
+
+.value-card-full {
+    text-align: center;
+    padding: 28px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.team-card {
+    text-align: center;
+}
+
+.team-card img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+/* Services Detailed Page */
+.service-detailed-card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 48px;
+    padding: 32px;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.service-detailed-icon i {
+    font-size: 3rem;
+    color: var(--green);
+}
+
+.service-detailed-content ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.service-detailed-content ul li {
+    margin: 12px 0;
+}
+
+.service-detailed-content ul li i {
+    color: var(--green);
+    margin-right: 10px;
+}
+
+/* Pricing Grid */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.pricing-card {
+    background: white;
+    padding: 32px;
+    border-radius: 24px;
+    text-align: center;
+    position: relative;
+}
+
+.pricing-card.featured {
+    border: 2px solid var(--green);
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--green);
+    margin: 16px 0;
+}
+
+.popular-tag {
+    display: inline-block;
+    background: var(--green);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-top: 12px;
+}
+
+/* Contact Page */
+.contact-grid-full {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.contact-info-large {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.contact-method {
+    display: flex;
+    gap: 20px;
+    padding: 24px;
+    background: var(--gray-light);
+    border-radius: 20px;
+}
+
+.contact-method i {
+    font-size: 2rem;
+    color: var(--green);
+}
+
+.appointment-form-large {
+    background: var(--gray-light);
+    padding: 32px;
+    border-radius: 24px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 14px 18px;
+    border: 1px solid var(--gray);
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.whatsapp-link {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Testimonials Page */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+.testimonial-card-full {
+    background: white;
+    padding: 32px;
+    border-radius: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.testimonial-rating {
+    color: #FBBF24;
+    margin-bottom: 16px;
+}
+
+.testimonial-author {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--gray);
+}
+
+.leave-review {
+    text-align: center;
+}
+
+/* Dashboard */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+}
+
+.dashboard-card {
+    background: white;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.dashboard-card h3 {
+    margin-bottom: 20px;
+    color: var(--navy);
+}
+
+.profile-card {
+    text-align: center;
+}
+
+.profile-avatar i {
+    font-size: 5rem;
+    color: var(--green);
+}
+
+.appointment-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.appointment-date {
+    text-align: center;
+    background: var(--gray-light);
+    padding: 8px 12px;
+    border-radius: 12px;
+    min-width: 60px;
+}
+
+.date-day {
+    font-size: 1.4rem;
+    font-weight: 700;
+    display: block;
+}
+
+.btn-small {
+    background: var(--gray-light);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.record-item, .medication-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--gray);
+}
+
+.status-active {
+    color: var(--green);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.whatsapp-reminder {
+    background: #EFF6FF;
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.action-btn {
+    display: block;
+    padding: 12px;
+    background: var(--gray-light);
+    text-align: center;
+    text-decoration: none;
+    color: var(--navy);
+    border-radius: 40px;
+    font-weight: 500;
+}
+
+.demo-notice {
+    background: #FEF3C7;
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+/* Floating WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 1000;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    background: var(--navy);
+    color: white;
+    padding: 48px 0 24px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.footer-col h4 {
+    margin-bottom: 16px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+}
+
+.footer-col a:hover {
+    color: white;
+}
+
+.social-links {
+    display: flex;
+    gap: 16px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.9rem;
+}
+
+/* Map */
+.map-placeholder {
+    text-align: center;
+}
+
+.map-placeholder img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.map-note {
+    margin-top: 16px;
+    color: var(--text-muted);
+}
+
+/* ============================================
+   Additional Styles for Enhanced Functionality
+   ============================================ */
+
+/* Form Error States */
+input.error, select.error, textarea.error {
+    border-color: #DC2626 !important;
+    background-color: #FEF2F2 !important;
+}
+
+/* Loading Spinner */
+.loader {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid var(--green);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Filter Buttons */
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    border: 1px solid var(--gray);
+    background: white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--green);
+    color: white;
+    border-color: var(--green);
+}
+
+/* Vital Signs Tracker */
+.vital-entry {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-bottom: 1px solid var(--gray);
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.vital-signs-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+/* Patient Cards */
+.patient-card {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    border: 1px solid var(--gray);
+}
+
+.patient-card button {
+    margin-top: 8px;
+    padding: 6px 12px;
+    background: var(--green);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 90px;
+    right: 24px;
+    width: 45px;
+    height: 45px;
+    background: var(--green);
+    color: white;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
+    background: var(--green-light);
+}
+
+/* Dark Mode Toggle Switch */
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--green);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Health Tip Banner */
+.health-tip-banner {
+    background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Floating Action Menu */
+.fab-menu {
+    position: fixed;
+    bottom: 100px;
+    right: 24px;
+    z-index: 998;
+}
+
+.fab-main {
+    width: 55px;
+    height: 55px;
+    background: var(--green);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+}
+
+.fab-options {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fab-menu.open .fab-options {
+    display: flex;
+}
+
+.fab-option {
+    width: 45px;
+    height: 45px;
+    background: var(--navy);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.3s;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 80px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .fab-menu {
+        bottom: 90px;
+        right: 16px;
+    }
+    
+    .vital-entry {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .filter-buttons {
+        gap: 8px;
+    }
+    
+    .filter-btn {
+        padding: 6px 14px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .hero-grid {
+        flex-direction: row;
+        text-align: left;
+    }
+    .hero-content {
+        text-align: left;
+        flex: 1;
+    }
+    .hero-buttons {
+        justify-content: flex-start;
+    }
+    .hero-image {
+        flex: 1;
+    }
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .about-preview-grid {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .services-grid, .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-grid-full {
+        flex-direction: row;
+    }
+    .contact-info-large {
+        flex: 1;
+    }
+    .appointment-form-large {
+        flex: 1;
+    }
+    
+    .form-row {
+        flex-direction: row;
+    }
+    .form-row .form-group {
+        flex: 1;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .mv-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .values-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .pricing-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .service-detailed-card {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .services-grid, .why-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .dashboard-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 20px;
+        gap: 16px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .whatsapp-float {
+        padding: 10px 16px;
+        font-size: 0.8rem;
+    }
+}
